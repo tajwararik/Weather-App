@@ -1,3 +1,5 @@
+import { weather } from "./getWeather.js";
+
 const cityName = document.getElementById("city");
 
 cityName.addEventListener("input", () => {
@@ -12,5 +14,6 @@ export function getCityName() {
     cityName.reportValidity();
   } else {
     const city = cityName.value;
+    weather(city.trim());
   }
 }
