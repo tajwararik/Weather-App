@@ -5,7 +5,7 @@ cityName.addEventListener("input", () => {
 });
 
 export function getCityName() {
-  const pattern = /^[A-Za-z]+$/;
+  const pattern = /^[A-Za-z\s]+$/;
 
   if (cityName.value === "" || !pattern.test(cityName.value)) {
     cityName.setCustomValidity("Please enter a valid city name.");
