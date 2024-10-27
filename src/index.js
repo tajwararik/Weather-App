@@ -1,4 +1,4 @@
-import { getCityName } from "./getCity.js";
+import { getCityName } from "./pages/getCity.js";
 import "./styles.css";
 
 const form = document.querySelector("form");
