@@ -1,4 +1,5 @@
 import { getInformation } from "./weatherDOMHandle";
+import { showGIF } from "./gifDOMHandle";
 
 export function weather(cityName) {
   const city = cityName;
@@ -19,10 +20,11 @@ async function fetchData(cityName) {
     const feelsTemp = getData.days[0].feelslike;
     const humidity = getData.days[0].humidity;
     const description = getData.days[0].description;
-    const conditions = getData.days[0].conditions;
+    const icon = getData.days[0].icon;
 
-    getInformation(city, temp, feelsTemp, humidity, description, conditions);
+    getInformation(city, temp, feelsTemp, humidity, description);
+    showGIF(icon);
   } catch (err) {
-    alert(err);
+    console.log(err);
   }
 }
