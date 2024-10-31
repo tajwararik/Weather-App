@@ -1,3 +1,5 @@
+import { getInformation } from "./weatherDOMHandle";
+
 export function weather(cityName) {
   const city = cityName;
 
@@ -10,8 +12,16 @@ async function fetchData(cityName) {
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${cityName}?key=SXBT5JT6F5USTW2XYTH4YNYCD`,
       { mode: "cors" }
     );
+
     const getData = await response.json();
-    console.log(getData);
+    const city = getData.resolvedAddress;
+    const temp = getData.days[0].temp;
+    const feelsTemp = getData.days[0].feelslike;
+    const humidity = getData.days[0].humidity;
+    const description = getData.days[0].description;
+    const conditions = getData.days[0].conditions;
+
+    getInformation(city, temp, feelsTemp, humidity, description, conditions);
   } catch (err) {
     alert(err);
   }
