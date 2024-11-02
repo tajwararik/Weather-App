@@ -1,8 +1,31 @@
-# Documentation
+# Weather App
 
- - Select from repository template while creating new repository on github
- - After cloning run `npm install` for instaling all the dependencies
- - Add any necessary loader like images etc. if needed
- - import css file to `index.js`
- - Run `npm run build` to build
- - Run `npm run dev` to read the config and `ctrl` + `c` to kill it.
+This is a project from the The Odin Project.
+
+In this project I have made Weather App a web application using HTML, CSS and JavaScript. I have used ES6 Modules and JavaScript alone to generate the entire contents of the website.
+
+## Overview
+
+Users should be able to:
+
+- To search any city name
+- See the temperature
+- Feels like temperature
+- Humidity
+- Description
+- GIF according to the temperature
+- Switching between fahrenheit and celsius
+
+## Link
+
+- [Live url](https://tajwararik.github.io/Weather-App/)
+
+## Built with
+
+- JavaScript
+- ES6 Modules
+- Flexbox
+- npm
+- Webpack
+- Form validation
+- Asynchronous JavaScript
