@@ -15,5 +15,8 @@ export function showGIF(icon) {
       img.src = response.data.images.original.url;
 
       section.append(img);
+    })
+    .catch(function (err) {
+      console.log(err);
     });
 }
