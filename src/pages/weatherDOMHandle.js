@@ -17,9 +17,11 @@ export function getInformation(city, temp, feelsTemp, humidity, description) {
     const fahrenheit = temp;
     const feelsFahrenheit = feelsTemp;
 
+    // Converting fahrenheit to celsius
     const celsius = ((fahrenheit - 32) / 9) * 5;
     const feelCelsius = ((feelsFahrenheit - 32) / 9) * 5;
 
+    // Changing text of the button
     this.textContent =
       this.textContent === "Switch to °F" ? "Switch to °C" : "Switch to °F";
 
@@ -29,6 +31,7 @@ export function getInformation(city, temp, feelsTemp, humidity, description) {
       displayInCelsius();
     }
 
+    // Displaying temperature in fahrenheit
     function displayInFahrenheit() {
       section.querySelector(".temp").innerHTML = `${fahrenheit}°F`;
 
@@ -37,6 +40,7 @@ export function getInformation(city, temp, feelsTemp, humidity, description) {
       ).innerHTML = `Feels like ${feelsFahrenheit}°F`;
     }
 
+    // Displaying temperature in celsius
     function displayInCelsius() {
       section.querySelector(".temp").innerHTML = `${celsius.toFixed(
         1
